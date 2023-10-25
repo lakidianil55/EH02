@@ -3,15 +3,21 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.testcases.Catageories_Functionality_Test"/>
+      <class name="com.testcases.Company_Functinality_Test"/>
+      <class name="com.testcases.Location_functionality_Test"/>
+      <class name="com.testcases.Stock_Move_Functionality_Test"/>
+      <class name="com.testcases.Employee_registration_Functionality_Test"/>
+      <class name="com.testcases.Logout_Functionality_Test"/>
       <class name="com.testcases.Add_Product_Inventory_Functionality_Test"/>
       <class name="com.testcases.Customer_functionality_Test"/>
       <class name="com.testcases.Login_Fuctionality_Test"/>
       <class name="com.testcases.Logintest"/>
+      <class name="com.testcases.Shifts_Functionality_Test"/>
+      <class name="com.testcases.Condition_functionality_Test"/>
       <class name="com.testcases.Holidays_Functionality_Test"/>
+      <class name="com.testcases.Sub_Catageories_Functionality_Test"/>
       <class name="com.testcases.Usertype_Functionality_Test"/>
-      <class name="com.testcases.Stock_Move_Functionality_Test"/>
-      <class name="com.testcases.Logout_Functionality_Test"/>
-      <class name="com.testcases.Employee_registration_Functionality_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

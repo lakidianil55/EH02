@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.Usertype_Functionality_Test">
+      <class name="com.testcases.Stock_Move_Functionality_Test">
         <methods>
           <include name="setup"/>
-          <include name="Usertypevalidation" invocation-numbers="0"/>
           <include name="teardown"/>
+          <include name="Stockmovevalidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.testcases.Usertype_Functionality_Test -->
+      </class> <!-- com.testcases.Stock_Move_Functionality_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

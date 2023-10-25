@@ -27,10 +27,10 @@ public class Employee_registration_Functionality_Test extends Basetest {
 	public String[][] dataload() throws Throwable {
 		return utils.Data(sheetname1);
 	}
-
+                                   //////not working module////
 	@BeforeMethod
-	public void setup() {
-
+	public void setup() {         /////not working module///////
+                                 ///////not working module/////
 		initialization();
 
 		login = new LoginPage();

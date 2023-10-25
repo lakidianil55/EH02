@@ -1,6 +1,7 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -41,12 +42,11 @@ public class Stock_Move_Functionality_Test extends Basetest {
 
 	@Test(dataProvider = "dataload", dataProviderClass = Stock_Move_Functionality_Test.class)
 
-	public void Stockmovevalidation(String References, String textbox,String MvingQty,String REReferences,String REtextbox,String REMovingQty)throws Throwable {
+	public void Stockmovevalidation(String References, String textbox, String MvingQty, String REReferences,
+			String REtextbox, String REMovingQty) throws Throwable {
 		login.verifylogin();
-		StockMove.Stockmoveverify(References, textbox,MvingQty,REReferences,REtextbox,REMovingQty);
-	
-	
-		AssertJUnit.assertEquals(500,500);
+		StockMove.Stockmoveverify(References, textbox, MvingQty, REReferences, REtextbox, REMovingQty);
+		
 
 	}
 

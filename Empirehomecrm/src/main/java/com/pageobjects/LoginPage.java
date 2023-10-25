@@ -23,13 +23,26 @@ public class LoginPage extends Basetest {
 	   PageFactory.initElements(driver,this);
    }
    
-   
-   public void verifylogin() {
-	   
-	  userid.sendKeys(prop.getProperty("username")); 
+
+
+
+public void LoginPage() {
+	userid.sendKeys(prop.getProperty("username")); 
 	   pass.sendKeys(prop.getProperty("password"));
 	   loginbutton.click();
-   }
+	
+}
+
+
+
+
+public void verifylogin() {
+	userid.sendKeys(prop.getProperty("username")); 
+	   pass.sendKeys(prop.getProperty("password"));
+	   loginbutton.click();
+	
+	
+}
    
 	
 }

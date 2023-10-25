@@ -1,9 +1,6 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -48,12 +45,10 @@ public class Add_Product_Inventory_Functionality_Test extends Basetest {
 		Addproduct.verifyAddInventorypage(ModelNumber, Title, ItemDescription, Height, Width, Breadth, ColorName,
 				ActualPrice, textMRP, Qty);
 
-		
-		
-		AssertJUnit.assertEquals( "Total 1 records", "Total 1 records");   //MRP
-		
+		Addproduct.AddInventory_AssertMessage();
+
 	}
-	
+
 	@AfterMethod
 	public void teardown() {
 

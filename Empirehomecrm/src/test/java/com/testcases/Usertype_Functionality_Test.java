@@ -47,9 +47,7 @@ public class Usertype_Functionality_Test extends Basetest {
 			String RETypeCode, String searchtext1) throws Throwable {
 		login.verifylogin();
 		Usertype.UserTypeverify(Textfiledname, Textfiledcode, searchtext, RETypeName, RETypeCode, searchtext1);
-
-		
-		AssertJUnit.assertEquals(1,1);
+		Usertype.UsertypeAssertMessage();
 
 	}
 

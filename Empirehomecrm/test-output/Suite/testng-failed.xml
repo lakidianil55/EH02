@@ -3,48 +3,62 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.testcases.Stock_Move_Functionality_Test">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="Stockmovevalidation"/>
-        </methods>
-      </class> <!-- com.testcases.Stock_Move_Functionality_Test -->
-      <class name="com.testcases.Login_Fuctionality_Test">
-        <methods>
-          <include name="setup"/>
-          <include name="loginvalidation" invocation-numbers="0 1 2 4"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.testcases.Login_Fuctionality_Test -->
-      <class name="com.testcases.Usertype_Functionality_Test">
-        <methods>
-          <include name="setup"/>
-          <include name="Usertypevalidation"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.testcases.Usertype_Functionality_Test -->
       <class name="com.testcases.Holidays_Functionality_Test">
         <methods>
-          <include name="Holidaysvalidation"/>
+          <include name="Holidaysvalidation" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.testcases.Holidays_Functionality_Test -->
-      <class name="com.testcases.Employee_registration_Functionality_Test">
+      <class name="com.testcases.Login_Fuctionality_Test">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="Employeevalidation"/>
-        </methods>
-      </class> <!-- com.testcases.Employee_registration_Functionality_Test -->
-      <class name="com.testcases.Logintest">
-        <methods>
-          <include name="loginvalidation"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="loginvalidation" invocation-numbers="3"/>
         </methods>
-      </class> <!-- com.testcases.Logintest -->
+      </class> <!-- com.testcases.Login_Fuctionality_Test -->
+      <class name="com.testcases.Catageories_Functionality_Test">
+        <methods>
+          <include name="teardown"/>
+          <include name="ADD_CategoriesFunctionality"/>
+          <include name="setup"/>
+          <include name="Edit_CategoriesFunctionality"/>
+        </methods>
+      </class> <!-- com.testcases.Catageories_Functionality_Test -->
+      <class name="com.testcases.Sub_Catageories_Functionality_Test">
+        <methods>
+          <include name="Sub_Catageories_Functionality_Delete"/>
+          <include name="Sub_Catageories_Functionality_Edit"/>
+          <include name="Sub_Catageories_Functionality_Add"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testcases.Sub_Catageories_Functionality_Test -->
+      <class name="com.testcases.Condition_functionality_Test">
+        <methods>
+          <include name="teardown"/>
+          <include name="Condition_Functionality_Edit"/>
+          <include name="setup"/>
+          <include name="Condition_Functionality_Add"/>
+          <include name="Condition_Functionality_Delete"/>
+        </methods>
+      </class> <!-- com.testcases.Condition_functionality_Test -->
+      <class name="com.testcases.Stock_Move_Functionality_Test">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="Stockmovevalidation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.testcases.Stock_Move_Functionality_Test -->
+      <class name="com.testcases.Shifts_Functionality_Test">
+        <methods>
+          <include name="Shifts_Functionality_Add"/>
+          <include name="Shifts_Functionality_Edit"/>
+          <include name="setup"/>
+          <include name="Shifts_Functionality_Delete"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testcases.Shifts_Functionality_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

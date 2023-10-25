@@ -1,8 +1,13 @@
 package com.pageobjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 
 import com.base.Basetest;
 import com.utils.utils;
@@ -44,15 +49,20 @@ public class Customer_functionality extends Basetest {
 
 	@FindBy(xpath = "//button[@class='swal-button swal-button--yes']")
 	WebElement clickyes;
-	
-	
+
+	@FindBy(xpath = "//div[@id='mydatatable_info']")
+	WebElement AssertJUnit2;
+	@FindBy(id = "mydatatable")
+	WebElement AssertJUnit1;
 
 	public Customer_functionality() {
 		PageFactory.initElements(driver, this);
 
 	}
 
-	public void Customervalidation(String EnterCustomerNameTesx,String EnterMobileNumberText,String EnterEmailIdText,String EnterWhatsappNumberText,String CustomerSearch,String REEnterCustomerName,String REEnterMobileNumber,String REEnterEmailId,String REEnterWhatsappNumber  ) throws Throwable {
+	public void Customervalidation(String EnterCustomerNameTesx, String EnterMobileNumberText, String EnterEmailIdText,
+			String EnterWhatsappNumberText, String CustomerSearch, String REEnterCustomerName,
+			String REEnterMobileNumber, String REEnterEmailId, String REEnterWhatsappNumber) throws Throwable {
 		Thread.sleep(2000);
 		clickkeypad.click();
 		Thread.sleep(2000);
@@ -92,7 +102,19 @@ public class Customer_functionality extends Basetest {
 		clickyes.click();
 		Thread.sleep(2000);
 		search.sendKeys(CustomerSearch);
-	
+
 	}
 
+	public void CustomerAssertMessage() {
+
+		if (AssertJUnit2.isDisplayed()) {
+
+			System.out.println(" Element is displayed message." + AssertJUnit2.getText());
+			AssertJUnit.assertTrue(" Element is displayed.", true);
+		} else {
+			System.out.println("Element is not displayed.");
+			AssertJUnit.fail(" Element is not displayed.");
+
+		}
+	}
 }

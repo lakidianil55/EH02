@@ -1,8 +1,16 @@
 package com.pageobjects;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 
 import com.base.Basetest;
 
@@ -19,8 +27,7 @@ public class Holidays_Functionality extends Basetest {
 
 	@FindBy(xpath = "//a[normalize-space()='Add New']")
 	WebElement clickAddNew;
-	
-	
+
 	@FindBy(xpath = "//input[@name='HolidayDate']")
 	WebElement HolidayDate;
 
@@ -34,20 +41,25 @@ public class Holidays_Functionality extends Basetest {
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement clickSave;
 
-	@FindBy(xpath = "//tbody/tr[1]/td[5]/a[1]/button[1]")
-	WebElement clicEditbutton;
-	@FindBy(xpath = "//tbody/tr[36]/td[5]/a[2]/button[1]")
-	WebElement clicDelatebutton;
+	@FindBy(xpath = ".//i[@class='fa fa-pencil']")
+	WebElement EditButton;
+
+	@FindBy(xpath = ".//i[@class='fa fa-trash-o']")
+	WebElement DeleteButton;
 
 	@FindBy(xpath = "//button[@class='swal-button swal-button--yes']")
 	WebElement clicyesbutton;
+
+	@FindBy(xpath = ".//td[1]")
+	List<WebElement> AssertJUnit1;
 
 	public Holidays_Functionality() {
 		PageFactory.initElements(driver, this);
 
 	}
 
-	public void Holidaysverify(String TextHolidayDate, String TextHolidayName ,String TextHolidayDesc, String REHolidayDate,String REHolidayName,String REHolidayDesc) throws Throwable {
+	public void Holidaysverify(String TextHolidayDate, String TextHolidayName, String TextHolidayDesc,
+			String REHolidayDate, String REHolidayName, String REHolidayDesc) throws Throwable {
 		Thread.sleep(2000);
 		clickkeypad.click();
 		Thread.sleep(2000);
@@ -59,22 +71,21 @@ public class Holidays_Functionality extends Basetest {
 		Thread.sleep(2000);
 		HolidayDate.click();
 		Thread.sleep(2000);
-		
-		HolidayDate.sendKeys(TextHolidayDate);
+
+		HolidayDate.sendKeys(prop.getProperty("HolidayDate"));
 		Thread.sleep(2000);
-		
+
 		HolidayName.sendKeys(TextHolidayName);
 		Thread.sleep(2000);
-	
+
 		HolidayDesc.sendKeys(TextHolidayDesc);
 		Thread.sleep(2000);
 		clickSave.click();
 		Thread.sleep(2000);
-		clicEditbutton.click();
+		EditButton.click();
 		Thread.sleep(2000);
-				
 		HolidayDate.clear();
-		HolidayDate.sendKeys(REHolidayDate);
+		HolidayDate.sendKeys(prop.getProperty("REHolidayDate"));
 		Thread.sleep(2000);
 		HolidayName.clear();
 		HolidayName.sendKeys(REHolidayName);
@@ -84,9 +95,27 @@ public class Holidays_Functionality extends Basetest {
 		Thread.sleep(2000);
 		clickSave.click();
 		Thread.sleep(2000);
-		clicDelatebutton.click();
+		DeleteButton.click();
 		Thread.sleep(2000);
 		clicyesbutton.click();
+
+	}
+
+	public void HolidaysAssertRows() {
+		List<WebElement> rows = driver.findElements(By.xpath(".//td[normalize-space()='Vinayak Chaturthi']"));
+
+		if (rows.isEmpty()) {
+			Assert.fail("No rows found in the table.");
+		} else {
+			String expectedText = "Vinayak Chaturthi";
+
+			for (WebElement row : rows) {
+				String actualText = row.getText();
+				System.out.println(actualText);
+
+			}
+		}
+
 	}
 
 }

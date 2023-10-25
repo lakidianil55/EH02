@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.AssertJUnit;
 
 import com.base.Basetest;
 import com.utils.utils;
@@ -73,6 +74,8 @@ public class Add_Product_Inventory_Functionality extends Basetest {
 	@FindBy(xpath = "//button[normalize-space()='Search']")
 	WebElement textbox17;
 	
+	@FindBy(xpath  = "//h1[contains(text(),'All Inventory - Total :')]")
+	WebElement AssertJUnitEdit;
 	public Add_Product_Inventory_Functionality() {
 		PageFactory.initElements(driver, this);
 
@@ -137,5 +140,19 @@ public class Add_Product_Inventory_Functionality extends Basetest {
 		textbox16.sendKeys(prop.getProperty("search"));
 		Thread.sleep(2000);
 		textbox17.click();//search button
+	}
+	
+	// AssertMessages
+	public void AddInventory_AssertMessage() {
+
+		if (AssertJUnitEdit.isDisplayed()) {
+			System.out.println("AddInventory Element is displayed." + AssertJUnitEdit.getText());
+			AssertJUnit.assertTrue("AddInventory Element is displayed.", true);
+		
+		} else {
+			System.out.println("AddInventory Element is not displayed.");
+			AssertJUnit.fail("AddInventory Element is not displayed.");
+
+}
 	}
 }

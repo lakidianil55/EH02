@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.AssertJUnit;
 
 import com.base.Basetest;
 import com.utils.utils;
@@ -45,6 +46,8 @@ public class Usertype_Functionality extends Basetest {
 
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement clickSave1;
+	@FindBy(xpath = "//div[@id='mydatatable_info']")
+	WebElement AssertJUnit2;
 
 	public Usertype_Functionality() {
 		PageFactory.initElements(driver, this);
@@ -82,4 +85,17 @@ public class Usertype_Functionality extends Basetest {
 		Thread.sleep(2000);
 		search.sendKeys(searchtext1);
 	}
+	public void  UsertypeAssertMessage() {
+
+		if (AssertJUnit2.isDisplayed()) {
+
+			System.out.println(" Element is displayed message." + AssertJUnit2.getText());
+			AssertJUnit.assertTrue(" Element is displayed.", true);
+		} else {
+			System.out.println("Element is not displayed.");
+			AssertJUnit.fail(" Element is not displayed.");
+
+		}
+	}
 }
+

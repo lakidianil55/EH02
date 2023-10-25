@@ -1,6 +1,7 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -34,7 +35,7 @@ public class Logout_Functionality_Test extends Basetest {
 		Logout.verifyLogout();
 
 		
-		AssertJUnit.assertEquals( "Login","Login");
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//h4[@class='text-center font-weight-bold mb-3']")).isDisplayed());
 
 	}
 

@@ -1,6 +1,8 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -39,19 +41,16 @@ public class Customer_functionality_Test extends Basetest {
 
 	@Test(dataProvider = "dataload", dataProviderClass = Customer_functionality_Test.class)
 
-	public void Customervalidation(String EnterCustomerNameTesx,String EnterMobileNumberText,String EnterEmailIdText,String EnterWhatsappNumberText,String CustomerSearch,String REEnterCustomerName,String REEnterMobileNumber,String REEnterEmailId,String REEnterWhatsappNumber  ) throws Throwable {
+	public void Customervalidation(String EnterCustomerNameTesx, String EnterMobileNumberText, String EnterEmailIdText,
+			String EnterWhatsappNumberText, String CustomerSearch, String REEnterCustomerName,
+			String REEnterMobileNumber, String REEnterEmailId, String REEnterWhatsappNumber) throws Throwable {
 		login.verifylogin();
-		Customer.Customervalidation(EnterCustomerNameTesx, EnterMobileNumberText, EnterEmailIdText, EnterWhatsappNumberText, CustomerSearch, REEnterCustomerName, REEnterMobileNumber, REEnterEmailId, REEnterWhatsappNumber);
-//		boolean test = !driver.equals("test = !driver.equals");
-//		AssertJUnit.assertTrue("No matching records found'", test);
-//		
-		AssertJUnit.assertEquals("Showing 0 to 0" ,"Showing 0 to 0");
+		Customer.Customervalidation(EnterCustomerNameTesx, EnterMobileNumberText, EnterEmailIdText,
+				EnterWhatsappNumberText, CustomerSearch, REEnterCustomerName, REEnterMobileNumber, REEnterEmailId,
+				REEnterWhatsappNumber);
+		Customer.CustomerAssertMessage();
 
-		}
-
-		
-
-	
+	}
 
 	@AfterMethod
 	public void teardown() {
