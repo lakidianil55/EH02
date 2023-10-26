@@ -77,32 +77,32 @@ public class Location_functionality extends Basetest {
 		Thread.sleep(2000);
 		AddNewLocation.click();
 		Thread.sleep(2000);
-		LocationName.sendKeys("Andhra Pradesh");
+		LocationName.sendKeys(prop.getProperty("LocationName"));
 		Thread.sleep(2000);
 		savebutton.click();
 		Thread.sleep(2000);
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		searchLocation.sendKeys("Andhra Pradesh");
+		searchLocation.sendKeys(prop.getProperty("LocationName"));
 
 	}
 
 	public void Location_Functionality_Edit() throws Throwable {
 		Thread.sleep(2000);
 		searchLocation.clear();
-		searchLocation.sendKeys("Andhra Pradesh");
+		searchLocation.sendKeys(prop.getProperty("LocationName"));
 		Thread.sleep(2000);
 		EditButton.click();
 		Thread.sleep(2000);
 		Thread.sleep(2000);
 		LocationName.clear();
-		LocationName.sendKeys("Kadapa");
+		LocationName.sendKeys(prop.getProperty("RELocationName"));
 		Thread.sleep(2000);
 		savebutton.click();
 		Thread.sleep(2000);
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		searchLocation.sendKeys("Kadapa");
+		searchLocation.sendKeys(prop.getProperty("RELocationName"));
 
 	}
 
@@ -115,7 +115,7 @@ public class Location_functionality extends Basetest {
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
 		searchLocation.clear();
-		searchLocation.sendKeys("Kadapa");
+		searchLocation.sendKeys(prop.getProperty("RELocationName"));
 
 	}
 
@@ -198,14 +198,3 @@ public class Location_functionality extends Basetest {
 		}
 	}
 }
-
-	
-	
-		    
-
-
-    
-  
-            
-        
-   
