@@ -87,13 +87,13 @@ public class Condition_functionality extends Basetest {
 		editlength.click();
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		searchLocation.sendKeys(prop.getProperty("searchCondition"));
+		searchLocation.sendKeys(prop.getProperty("ConditionName"));
 	}
 
 	public void Condition_functionality_Edit() throws Throwable {
 
 		clickSearch.clear();
-		clickSearch.sendKeys(prop.getProperty("searchCondition"));
+		clickSearch.sendKeys(prop.getProperty("ConditionName"));
 		EditButton.click();
 		Thread.sleep(2000);
 		ConditionName.clear();
@@ -104,14 +104,14 @@ public class Condition_functionality extends Basetest {
 		editlength.click();
 		utils.Dropdown(editlength, "100");
 		clickSearch.clear();
-		clickSearch.sendKeys(prop.getProperty("REsearchCondition"));
+		clickSearch.sendKeys(prop.getProperty("REConditionName"));
 
 	}
 
 	public void Condition_functionality_Delete() throws Throwable {
 
 		clickSearch.clear();
-		clickSearch.sendKeys(prop.getProperty("REsearchCondition"));
+		clickSearch.sendKeys(prop.getProperty("REConditionName"));
 		Thread.sleep(2000);
 		DeleteButton.click();
 		Thread.sleep(2000);
@@ -120,7 +120,7 @@ public class Condition_functionality extends Basetest {
 		editlength.click();
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		clickSearch.sendKeys(prop.getProperty("REsearchCondition"));
+		clickSearch.sendKeys(prop.getProperty("REConditionName"));
 
 	}
 
