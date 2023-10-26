@@ -94,12 +94,12 @@ public class Sub_Catageories_Functionality extends Basetest {
 		editlength.click();
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		search.sendKeys(prop.getProperty("search1"));
+		search.sendKeys(prop.getProperty("SubCategoryName"));
 	}
 
 	public void Sub_Catageories_Edit() throws Throwable {
 		search.clear();
-		search.sendKeys(prop.getProperty("search1"));
+		search.sendKeys(prop.getProperty("SubCategoryName"));
 		EditButton.click();
 		Thread.sleep(2000);
 		subcatDD.click();
@@ -126,7 +126,7 @@ public class Sub_Catageories_Functionality extends Basetest {
 		editlength.click();
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		clickSearch.sendKeys(prop.getProperty("search2"));
+		clickSearch.sendKeys(prop.getProperty("RESubCategoryName"));
 	}
 
 	// AssertMessages
